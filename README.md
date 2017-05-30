@@ -14,6 +14,11 @@ import { ReaderWriterLock, LockHandle } from "prex";
 ```
 
 ## Gist of usage
+Import:
+
+```
+import { Capture, Captured } from "path/to/capture.lib";
+```
 
 Setup:
 ```
