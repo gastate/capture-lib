@@ -1,6 +1,7 @@
 import { Observable } from "rxjs/Observable";
 import { Subscription } from "rxjs/Subscription";
-import { ReaderWriterLock, LockHandle } from "prex";  //  https://github.com/rbuckton/prex/blob/master/docs/coordination.md#class-readerwriterlock
+// https://github.com/rbuckton/prex/blob/master/docs/coordination.md#class-readerwriterlock
+import { ReaderWriterLock, LockHandle } from "prex"; // tslint:disable-line:no-unused-variable
 
 export class Capture<T> {
     private locker: ReaderWriterLock = new ReaderWriterLock();

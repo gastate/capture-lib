@@ -1,8 +1,8 @@
 # capture-lib
 
-TypeScript library for capturing events as promises
+TypeScript library to capture the next value from an observable as a promise
 
-Might be helpful when using a library where methods trigger events but neither return the event data nor a promise that resolves to the event data.
+Might be helpful when using a library where methods trigger value generation but return neither the value nor a promise that resolves to the value.
 
 ## Dependencies
 
@@ -22,12 +22,12 @@ import { Capture, Captured } from "path/to/capture.lib";
 
 Setup:
 ```
-    myCapture: Capture<EventType> = new Capture<EventType>( observableToCapture );
+    myCapture: Capture<ValueType> = new Capture<ValueType>( observableToCapture );
 ```
 
-Capture triggered event:
+Capture next value:
 ```
-    promise: Promise<EventType> = myCapture.start().then( (captured:Captured<EventType>) => {
+    promise: Promise<ValueType> = myCapture.start().then( (captured:Captured<ValueType>) => {
         triggerEvent();
         return captured.toPromise();
     }
